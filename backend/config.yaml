@@ -1,0 +1,47 @@
+data:
+  sample_size: 10000
+  test_size: 0.2
+  random_state: 42
+
+features:
+  user_cols: ['device_type']
+  ad_cols: ['site_category']
+  context_cols: ['hour', 'banner_pos']
+  target: 'click'
+  
+  # Features to be generated
+  cross_cols:
+    - ['device_type', 'site_category']
+    
+model:
+  type: 'lightgbm' # lightgbm or xgboost
+  
+  lightgbm_params:
+    learning_rate: 0.05
+    n_estimators: 200
+    max_depth: -1
+    num_leaves: 31
+    objective: 'binary'
+    scale_pos_weight: 1.0 # Will be updated dynamically by imbalance handler
+    
+  xgboost_params:
+    learning_rate: 0.05
+    n_estimators: 200
+    max_depth: 6
+    objective: 'binary:logistic'
+    scale_pos_weight: 1.0
+
+lstm:
+  embedding_dim: 32
+  hidden_dim: 64
+  num_layers: 1
+  epochs: 5
+  batch_size: 256
+  learning_rate: 0.001
+
+tune:
+  n_trials: 20
+  
+serve:
+  host: "0.0.0.0"
+  port: 8000
