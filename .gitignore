@@ -1,8 +1,25 @@
+# Python
 venv/
+backend/venv/
 __pycache__/
+backend/__pycache__/
 *.pyc
+
+# ML & Data
 mlruns/
+backend/mlruns/
 mlflow.db
+backend/mlflow.db
+backend/models/*.pkl
 data/sample_dataset.csv
+backend/data/sample_dataset.csv
+backend/data/raw/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
+
+# Misc
 .env
 .DS_Store
