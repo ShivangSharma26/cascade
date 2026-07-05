@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+torch
+mlflow
+optuna
+fastapi
+uvicorn
+pyyaml
+category_encoders
