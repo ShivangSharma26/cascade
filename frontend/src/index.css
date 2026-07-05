@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-neon-red: #e50914;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-gray-200 antialiased font-sans;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+  }
+  
+  .neon-glow-strong {
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.6);
+  }
+}
