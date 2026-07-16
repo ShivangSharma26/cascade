@@ -29,7 +29,8 @@ function App() {
     setError(null);
     setResult(null);
     try {
-      const response = await axios.post('http://localhost:8000/predict', formData);
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await axios.post(`${apiUrl}/predict`, formData);
       setResult(response.data);
     } catch (err) {
       setError('Failed to connect to the backend API. Is the server running?');

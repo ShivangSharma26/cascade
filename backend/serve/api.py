@@ -57,7 +57,7 @@ def predict_ctr(request: PredictionRequest):
     # Map UI strings to actual Avazu encoded values for authenticity
     device_map = {"mobile": "1541007", "desktop": "1541008", "tablet": "1541009"}
     cat_map = {"electronics": "7931", "fashion": "7932", "home": "7938", "sports": "7943"}
-    pos_map = {1: "17", 2: "18", 3: "23", 4: "19", 5: "25"}
+    pos_map = {1: "17", 2: "18", 3: "23", 4: "19", 5: "25", 6: "22", 7: "24", 8: "20", 9: "30", 10: "27"}
     
     device_val = device_map.get(request.device_type.lower(), "1541007")
     cat_val = cat_map.get(request.category.lower(), "7931")
