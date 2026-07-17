@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import mlflow.lightgbm
+
 import pandas as pd
 import time
 
